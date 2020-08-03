@@ -99,4 +99,8 @@ class User extends Authenticatable implements JWTSubject
         }
         return false;
     }
+    public function userable()
+    {
+        return $this->morphTo();
+    }
 }
